@@ -25,8 +25,6 @@ return require('packer').startup(function(use)
   use 'kyazdani42/nvim-web-devicons'
 
   -- gui
-
-  -- nvim-colorizer.lua
   use {
     'norcalli/nvim-colorizer.lua',
     config = function()
@@ -34,7 +32,6 @@ return require('packer').startup(function(use)
     end
   }
 
-  -- zen mode
   use {
     'folke/zen-mode.nvim',
     config = function()
@@ -49,7 +46,6 @@ return require('packer').startup(function(use)
     end
   }
 
-
   use {
     'nvim-lualine/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons', opt = true},
@@ -58,8 +54,6 @@ return require('packer').startup(function(use)
     end
   }
 
-
--- nvim tree
   use {
     'kyazdani42/nvim-tree.lua',
     requires = 'kyazdani42/nvim-web-devicons',
@@ -68,7 +62,6 @@ return require('packer').startup(function(use)
     end
   }
 
-  -- dashboard
   use {
     'glepnir/dashboard-nvim',
     requires = 'nvim-lua/telescope.nvim',
@@ -78,7 +71,6 @@ return require('packer').startup(function(use)
     end
   }
 
-  -- tabline
   use {
     'akinsho/nvim-bufferline.lua',
     requires = 'kyazdani42/nvim-web-devicons',
@@ -89,7 +81,6 @@ return require('packer').startup(function(use)
   }
 
 
-  -- linting and intellisense
   use {
     'nvim-treesitter/nvim-treesitter',
     run  = ':TSUpdate',
@@ -100,7 +91,6 @@ return require('packer').startup(function(use)
 
   use {'mboughaba/i3config.vim'}
 
-  -- completion
 
   use {
     'hrsh7th/nvim-cmp',
@@ -122,6 +112,7 @@ return require('packer').startup(function(use)
       require('core.mv-nvimcmp')
   end,
   }
+
   use {"wbthomason/lsp-status.nvim"}
   use {"saadparwaiz1/cmp_luasnip"}
   use {"onsails/lspkind-nvim"}
@@ -131,10 +122,9 @@ return require('packer').startup(function(use)
         require('core.mv-lspsignature')
     end,
     }
-  -- searching
+
   use {'kien/ctrlp.vim'}
 
-  -- telescope
   use {
     'nvim-telescope/telescope.nvim',
     requires = {
@@ -160,7 +150,7 @@ return require('packer').startup(function(use)
         require('core.mv-cursorword')
     end
   }
- -- QOL
+
   use {'vimwiki/vimwiki'}
 
   use {
@@ -189,12 +179,19 @@ return require('packer').startup(function(use)
     end
   }
 
-  -- colorschemes
   use {'sainnhe/everforest'}
   use {'github/copilot.vim'}
-
-  -- latex
   use {'lervag/vimtex'}
+  use {'karb94/neoscroll.nvim',
+    config = function()
+      require('core.mv-neoscroll')
+    end
+  }
+ use {'farmergreg/vim-lastplace'}
+ use {'lewis6991/impatient.nvim'}
+
+
+
 end)
 
 
