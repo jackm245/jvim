@@ -46,7 +46,7 @@ vim.cmd('map <leader>n :NvimTreeToggle<CR>')
 vim.cmd('nnoremap <leader>z :ZenMode<CR>')
 
 -- Spell Check
-vim.cmd('map <leader>o :setlocal spell! spelllang=en_us<CR>')
+vim.cmd('map <leader>o :setlocal spell! spelllang=en<CR>')
 
 
 -- Bufferline

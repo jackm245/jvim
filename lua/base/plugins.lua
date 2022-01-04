@@ -182,6 +182,7 @@ return require('packer').startup(function(use)
   use {'sainnhe/everforest'}
   use {'github/copilot.vim'}
   use {'lervag/vimtex'}
+  -- use {'donRaphaco/neotex'}
   use {'karb94/neoscroll.nvim',
     config = function()
       require('core.mv-neoscroll')
@@ -189,6 +190,7 @@ return require('packer').startup(function(use)
   }
  use {'farmergreg/vim-lastplace'}
  use {'lewis6991/impatient.nvim'}
+ -- use {'aserebryakov/vim-todo-lists'}
 
 
 
