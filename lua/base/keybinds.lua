@@ -8,7 +8,7 @@
   --end
 --end
 
-vim.cmd('let mapleader=\".\"')
+vim.cmd('let mapleader=\"f\"')
 vim.cmd('inoremap <leader>ps :lua require(\'telescope.builtin\').grep_string({ search = vim.fn.input(\"Greo for > \")})<CR>')
 vim.cmd('map <leader>h :wincmd h<CR>')
 vim.cmd('map <leader>j :wincmd j<CR>')
@@ -73,3 +73,27 @@ vim.cmd('nnoremap <leader>fh <cmd>lua require(\'telescope.builtin\').help_tags()
 -- allow j and k to go through wrapped lines
 vim.cmd('noremap j gj')
 vim.cmd('noremap k gk')
+
+
+-- Essentially aliases for commonly used commands+lazy shift finger:
+vim.cmd('command! -bar -nargs=* -complete=file -range=% -bang W         <line1>,<line2>write<bang> <args>')
+vim.cmd('command! -bar -nargs=* -complete=file -range=% -bang Write     <line1>,<line2>write<bang> <args>')
+vim.cmd('command! -bar -nargs=* -complete=file -range=% -bang Wq        <line1>,<line2>wq<bang> <args>')
+vim.cmd('command! -bar                                  -bang Wqall     wqa<bang>')
+vim.cmd('command! -bar -nargs=* -complete=file -range=% -bang We        <line1>,<line2>w<bang> | e <args>')
+vim.cmd('command! -bar -nargs=* -complete=file -count   -bang Wnext     <count>wnext<bang> <args>')
+vim.cmd('command! -bar -nargs=* -complete=file -count   -bang Wprevious <count>wprevious<bang> <args>')
+vim.cmd('command! -bar -nargs=* -complete=file          -bang E         edit<bang> <args>')
+vim.cmd('command! -bar -nargs=* -complete=file          -bang Edit      edit<bang> <args>')
+vim.cmd('command! -bar                                  -bang Q         quit<bang>')
+vim.cmd('command! -bar                                  -bang Quit      quit<bang>')
+vim.cmd('command! -bar                                  -bang Qall      qall<bang>')
+vim.cmd('command! -bar -nargs=? -complete=option              Set       set <args>')
+vim.cmd('command! -bar -nargs=? -complete=help                Help      help <args>')
+vim.cmd('command! -bar -nargs=* -complete=file          -bang Make      make<bang> <args>')
+vim.cmd('command! -bar -nargs=* -complete=buffer        -bang Bdel      bdel<bang> <args>')
+vim.cmd('command! -bar -nargs=* -complete=buffer        -bang Bwipe     bwipe<bang> <args>')
+vim.cmd('command! -bar -nargs=* -complete=file          -bang Mksession mksession<bang> <args>')
+vim.cmd('command! -bar -nargs=* -complete=dir           -bang Cd        cd<bang> <args>')
+vim.cmd('command! -bar                                        Messages  messages')
+vim.cmd('command! -bar -nargs=+ -complete=file          -bang Source    source<bang> <args>')
