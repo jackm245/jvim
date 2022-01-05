@@ -62,14 +62,14 @@ return require('packer').startup(function(use)
     end
   }
 
-  use {
-    'glepnir/dashboard-nvim',
-    requires = 'nvim-lua/telescope.nvim',
-    event = 'BufWinEnter',
-    config = function()
-      require("core.mv-dashboard")
-    end
-  }
+  -- use {
+    -- 'glepnir/dashboard-nvim',
+    -- requires = 'nvim-lua/telescope.nvim',
+    -- event = 'BufWinEnter',
+    -- config = function()
+      -- require("core.mv-dashboard")
+    -- end
+  -- }
 
   use {
     'akinsho/nvim-bufferline.lua',
