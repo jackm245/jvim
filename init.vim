@@ -3,4 +3,3 @@ lua require 'init'
 " ctermbg=NONE
 "autocmd vimenter * hi NonText ctermbg=none
 "autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
-colorscheme everforest

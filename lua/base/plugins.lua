@@ -28,21 +28,21 @@ return require('packer').startup(function(use)
   use {
     'norcalli/nvim-colorizer.lua',
     config = function()
-      require('core.mv-colorizer')
+      require('core.jv-colorizer')
     end
   }
 
   use {
     'folke/zen-mode.nvim',
     config = function()
-      require('core.mv-zenmode')
+      require('core.jv-zenmode')
     end
   }
 
   use {
     'folke/twilight.nvim',
     config = function()
-      require('core.mv-twilight')
+      require('core.jv-twilight')
     end
   }
 
@@ -50,7 +50,7 @@ return require('packer').startup(function(use)
     'nvim-lualine/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons', opt = true},
     config = function()
-      require('core.mv-lualine')
+      require('core.jv-lualine')
     end
   }
 
@@ -58,7 +58,7 @@ return require('packer').startup(function(use)
     'kyazdani42/nvim-tree.lua',
     requires = 'kyazdani42/nvim-web-devicons',
     config = function()
-      require('core.mv-nvimtree')
+      require('core.jv-nvimtree')
     end
   }
 
@@ -67,7 +67,7 @@ return require('packer').startup(function(use)
     -- requires = 'nvim-lua/telescope.nvim',
     -- event = 'BufWinEnter',
     -- config = function()
-      -- require("core.mv-dashboard")
+      -- require("core.jv-dashboard")
     -- end
   -- }
 
@@ -76,7 +76,7 @@ return require('packer').startup(function(use)
     requires = 'kyazdani42/nvim-web-devicons',
     event = 'BufWinEnter',
     config = function()
-      require('core.mv-bufferline')
+      require('core.jv-bufferline')
     end
   }
 
@@ -85,7 +85,7 @@ return require('packer').startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run  = ':TSUpdate',
     config = function()
-      require('core.mv-nvim-treesitter')
+      require('core.jv-nvim-treesitter')
     end
   }
 
@@ -109,7 +109,7 @@ return require('packer').startup(function(use)
         { "tamago324/cmp-zsh" },
     },
     config = function()
-      require('core.mv-nvimcmp')
+      require('core.jv-nvimcmp')
   end,
   }
 
@@ -119,7 +119,7 @@ return require('packer').startup(function(use)
   use {'neovim/nvim-lspconfig'}
   use {"ray-x/lsp_signature.nvim",
     config = function()
-        require('core.mv-lspsignature')
+        require('core.jv-lspsignature')
     end,
     }
 
@@ -132,14 +132,14 @@ return require('packer').startup(function(use)
       {'nvim-lua/plenary.nvim'}
     },
     config = function()
-      require('core.mv-telescope')
+      require('core.jv-telescope')
     end
   }
 
  use {
     'lukas-reineke/indent-blankline.nvim',
     config = function()
-        require('core.mv-indent')
+        require('core.jv-indent')
     end
    }
 
@@ -147,7 +147,7 @@ return require('packer').startup(function(use)
     'itchyny/vim-cursorword',
     event = {'BufReadPre','BufNewFile'},
     config = function()
-        require('core.mv-cursorword')
+        require('core.jv-cursorword')
     end
   }
 
@@ -156,16 +156,16 @@ return require('packer').startup(function(use)
   use {
     'preservim/nerdcommenter',
     config = function()
-        require('core.mv-nerdcommenter')
+        require('core.jv-nerdcommenter')
     end
   }
 
   use {
     'folke/which-key.nvim',
     config = function()
-        require('core.mv-whichkey')
+        require('core.jv-whichkey')
     end
-}
+  }
 
   use {'tpope/vim-surround'}
 
@@ -175,17 +175,30 @@ return require('packer').startup(function(use)
     'Raimondi/delimitMate',
     event = 'InsertEnter',
     config = function()
-      require('core.mv-delimitmate')
+      require('core.jv-delimitmate')
     end
   }
 
-  use {'sainnhe/everforest'}
+  -- use {'sainnhe/everforest'}
+  use {
+    'navarasu/onedark.nvim',
+    config = function()
+        require('core.jv-onedark')
+    end
+  }
+  -- use ({
+      -- 'oncomouse/lushwal',
+      -- requires = { { 'rktjmp/lush.nvim', opt = true }, { 'rktjmp/shipwright.nvim', opt = true } },
+  -- })
+
+
   use {'github/copilot.vim'}
   use {'lervag/vimtex'}
+  use {'donRaphaco/neotex'}
   -- use {'donRaphaco/neotex'}
   use {'karb94/neoscroll.nvim',
     config = function()
-      require('core.mv-neoscroll')
+      require('core.jv-neoscroll')
     end
   }
  use {'farmergreg/vim-lastplace'}

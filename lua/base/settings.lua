@@ -55,8 +55,13 @@ vim.cmd('set nocompatible')
 vim.cmd('filetype plugin on')
 vim.cmd('highlight! link NERDTreeFlags NERDTreeDir')
 
-
-vim.cmd('colorscheme everforest')
+-- vim.cmd('let g:onedark_style = \'deep\'')
+-- vim.cmd('colorscheme onedark')
+require('onedark').setup {
+    style = 'deep',
+    ending_tildes=true
+}
+require('onedark').load()
 
 
 

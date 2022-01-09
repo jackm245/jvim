@@ -8,7 +8,7 @@
   --end
 --end
 
-vim.cmd('let mapleader=\"f\"')
+vim.cmd('let mapleader=\".\"')
 vim.cmd('inoremap <leader>ps :lua require(\'telescope.builtin\').grep_string({ search = vim.fn.input(\"Greo for > \")})<CR>')
 vim.cmd('map <leader>h :wincmd h<CR>')
 vim.cmd('map <leader>j :wincmd j<CR>')
@@ -47,6 +47,9 @@ vim.cmd('nnoremap <leader>z :ZenMode<CR>')
 
 -- Spell Check
 vim.cmd('map <leader>o :setlocal spell! spelllang=en<CR>')
+
+-- NeoTex
+vim.cmd('map <leader>ll :NeoTexOn<CR>')
 
 
 -- Bufferline
