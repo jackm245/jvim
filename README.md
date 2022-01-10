@@ -10,6 +10,9 @@
 # jvim
 Jack Morgan's Neovim Config
 
+![Screenshot 1](media/jvim_scrot_1.png)
+
+![Screenshot 2](media/jvim_scrot_2.png)
 
 ## Installation
 
