@@ -10,11 +10,17 @@
 # jvim
 Jack Morgan's Neovim Config
 
-%% ![Image 1](media/image_1.png)
+%% ![Image 1](media/jvim_scrot_1.png)
 
-%% ![Image 2](media/image_2.png)
+%% ![Image 2](media/jvim_scrot_2.png)
 
 ## Installation
+
+Dependencies:
+ - neovim nightly bin
+ - fd
+ - ripgrep
+ - Python3
 
 Install by running a single command
 <br>
